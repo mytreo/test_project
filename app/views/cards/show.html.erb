@@ -12,5 +12,13 @@
 	<label>review_date</label>		
 	<label> <%= @card.review_date %> <label>
 	
+			
+	<%= link_to "edit", edit_card_path(@card),
+                         class:"btn btn-success" %>	
+	
+	<%= link_to "delete", @card, method: :delete,
+                                  data: { confirm: "You sure?" } ,
+                         class:"btn btn-danger" %>
+	
     </div>
 </div>
