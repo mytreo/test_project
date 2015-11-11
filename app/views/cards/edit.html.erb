@@ -1,1 +1,18 @@
-edit
+<% provide(:title, 'Edit') %>
+
+<div class="row">
+	<div class="container">
+    <%= form_for(@card, :html => {:class => 'row'}) do |f| %>
+      <%= f.label(:text_ru, :class=>  "col-md-3") %>
+      <%= f.text_area(:text_ru, :class=> "col-md-6") %>
+
+      <%= f.label( :text_en, :class=> "col-md-3") %>
+      <%= f.text_area(:text_en, :class=> "col-md-6") %>
+
+      <%= f.label(:review_date, :class=> "col-md-3") %>
+      <%= f.date_select( :review_date, :class=> "col-md-6") %>
+
+      <%= f.submit "Edit Card", class: "col-md-12 btn btn-primary " %>
+    <% end %>
+  </div>
+</div>
