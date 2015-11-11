@@ -13,7 +13,7 @@ class CardsController < ApplicationController
   end
   
   def create
-    @card = User.new(card_params)    
+    @card = Card.new(card_params)    
     if @card.save
       redirect_to @card
     else
