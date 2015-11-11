@@ -3,7 +3,7 @@
 <div class="container-fluid">
 	<div class="panel panel-info">
 		<div class="panel-title">
-	    	<span>New Card</span>
+	    	<span>Card# <%= @card.id%></span>
 	    </div>		
 	    <div class="panel-body">
 		  
@@ -31,4 +31,11 @@
                          	</div>
    </div>
   </div>
+</div>
+
+<div class="container-fluid">
+	<div class="panel">
+	  	  <%= link_to "Back", root_path,
+                         class:"btn btn-primary btn-block" %>	
+	</div>  
 </div>
