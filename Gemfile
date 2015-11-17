@@ -16,7 +16,7 @@ end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara'
+  gem 'capybara','~>2.2.0'
   gem 'factory_girl_rails', '4.2.1'
 end
 
@@ -42,7 +42,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
+# bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 

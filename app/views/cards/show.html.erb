@@ -1,41 +1,36 @@
 <% provide(:title, 'Show') %>
-
 <div class="container-fluid">
 	<div class="panel panel-info">
 		<div class="panel-title">
-	    	<span>Card# <%= @card.id%></span>
-	    </div>		
-	    <div class="panel-body">
-		  
-	<div class="form-group">	  
-	<label class="label label-info">text_ru</label>	
-	<textarea class="form-control" readonly> <%= @card.text_ru %> </textarea>
-	</div>
-	<div class="form-group">
-	<label class="label label-info">test_en</label>	
-	<textarea class="form-control" readonly> <%= @card.text_en %> </textarea>
-	</div>
-	<div class="form-group">
-	<label class="label label-info">review_date</label>		
-	<label class="form-control"> <%= @card.review_date %> <label>
-	</div>
+			<span>Card# <%= @card.id%></span>
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label class="label label-info">text_ru</label>
+				<textarea class="form-control" readonly> <%= @card.text_ru %> </textarea>
+			</div>
+			<div class="form-group">
+				<label class="label label-info">test_en</label>
+				<textarea class="form-control" readonly> <%= @card.text_en %> </textarea>
+			</div>
+			<div class="form-group">
+				<label class="label label-info">review_date</label>
+				<label class="form-control"> <%= @card.review_date %> <label>
+			</div>
 			<div class="btn-group btn-group-justified">
-			  
-		
-	<%= link_to "edit", edit_card_path(@card),
-                         class:"btn btn-success" %>	
-	
-	<%= link_to "delete", @card, method: :delete,
-                                  data: { confirm: "You sure?" } ,
-                         class:"btn btn-danger" %>
-                         	</div>
-   </div>
-  </div>
+				<%= link_to "edit", edit_card_path(@card),
+				class:"btn btn-success" %>
+				<%= link_to "delete", @card, method: :delete,
+				data: { confirm: "You sure?" } ,
+				class:"btn btn-danger" %>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="container-fluid">
 	<div class="panel">
-	  	  <%= link_to "Back", root_path,
-                         class:"btn btn-primary btn-block" %>	
-	</div>  
+		<%= link_to "Back", root_path,
+		class:"btn btn-primary btn-block" %>
+	</div>
 </div>
