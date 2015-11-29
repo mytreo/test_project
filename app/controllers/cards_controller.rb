@@ -35,8 +35,11 @@ class CardsController < ApplicationController
   end
   
   def destroy
-    Card.find(params[:id]).destroy
-    redirect_to root_url
+    @card=Card.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to root_url }
+      format.js {}
+    end
   end
   
   
