@@ -5,21 +5,11 @@
 			<span>New Card</span>
 		</div>
 		<div class="panel-body">
-			<%= form_for(@card, :html => {:class => ''}) do |f| %>
-			<div class="form-group">
-				<%= f.label(:text_ru, :class=>  "label label-info") %>
-				<%= f.text_area(:text_ru, :class=> "form-control") %>
-			</div>
-			<div class="form-group">
-				<%= f.label( :text_en, :class=> "label label-info") %>
-				<%= f.text_area(:text_en, :class=> "form-control") %>
-			</div>
-			<div class="form-group">
-				<%= f.label(:review_date, :class=> "label label-info") %>
-				<br>
-				<%= f.date_select( :review_date, :class=> "form-control") %>
-			</div>
-			<%= f.submit "Create Card", class: "btn btn-primary btn-block" %>
+			<%= simple_form_for @card do |f| %>
+			<%= f.input :text_ru, as: :text,label_html: { class: 'label label-info' } , input_html: { class: 'form-control' }, placeholder: 'Enter text_ru'%>
+			<%= f.input :text_en, as: :text ,label_html: { class: 'label label-info' } , input_html: { class: 'form-control' }, placeholder: 'Enter text_en'%>
+			<%= f.input :review_date, as: :date, html5: true,label_html: { class: 'label label-info' }%>
+			<%= f.button :submit, "Create Card",class: "btn btn-primary btn-block" %>
 			<% end %>
 		</div>
 	</div>

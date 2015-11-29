@@ -125,6 +125,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
+    simple_form (3.2.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -156,7 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
-  capybara (= 2.2.0)
+  capybara (~> 2.2.0)
   coffee-rails (~> 4.0.1)
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
@@ -168,6 +171,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc
   selenium-webdriver (= 2.35.1)
+  simple_form
   sqlite3
   turbolinks
   uglifier (>= 2.1.1)
