@@ -1,5 +1,5 @@
-<div class="container-fluid">
-	<div class="panel panel-info">
+<div class="container-fluid" id="card<%= card.id%>">
+	<div class="panel panel-info" >
 		<div class="panel-title">
 			<span>Card# <%= card.id%></span>
 		</div>
@@ -21,9 +21,8 @@
 				class:"btn btn-info" %>
 				<%= link_to "edit", edit_card_path(card),
 				class:"btn btn-success" %>
-				<%= link_to "delete", card, method: :delete,
-				data: { confirm: "You sure?" } ,
-				class:"btn btn-danger" %>
+				<%= link_to "delete-ajax", card, remote: true, method: :delete, 				data: { confirm: "You sure?" } ,
+				class:"btn btn-danger",data: { confirm: "Are you sure?" }  %>
 			</div>
 		</div>
 	</div>
